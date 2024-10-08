@@ -86,12 +86,13 @@ const StartQuiz = () => {
         ))}
       </div>
 
-      <div className={`button-help ${quizState.qtdDica >= 3 ? "inative" : ""}`}>
-        {!quizState.answerSelected &&
+      <div className={` ${quizState.qtdDica >= 3 ? "inative" : ""}`}>
+        {!quizState.answerSelected && !quizState.dica && !quizState.elimina &&
         (
-          <div>
+          <div className="button-help">
             <button onClick={() => handleDica()}>Dica</button>
-            <button onClick={() => eliminaQuestion()}>Eliminar uma</button>
+            {options.length > 3 && (<button onClick={() => eliminaQuestion()}>Eliminar uma</button>)}
+            
           </div>
           
         )}

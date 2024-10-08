@@ -16,6 +16,7 @@ const initialState = {
   score: 0,
   qtdDica: 0,
   dica: false,
+  elimina: false,
 };
 
 const quizReducer = (state, action) => {
@@ -61,6 +62,7 @@ const quizReducer = (state, action) => {
         questaoAtual: state.questaoAtual + 1,
         gameStage: endGame ? STAGES[3] : state.gameStage,
         dica: false,
+        elimina: false,
       };
 
     case "REORDER_QUESTIONS":
@@ -123,10 +125,13 @@ const quizReducer = (state, action) => {
           : question,
       );
 
+      console.log(state.data.options)
+
       return {
         ...state,
         data: newData,
         qtdDica: state.qtdDica + 1,
+        elimina: true
       };
 
     default:
