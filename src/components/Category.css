@@ -1,0 +1,45 @@
+/* Container para as categorias */
+#category-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #56189c;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#category-container h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#category-container button {
+  background-color: #fff;
+  color: #56189c;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#category-container button:hover {
+  background-color: #8435de;
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #category-container {
+    padding: 15px;
+  }
+
+  #category-container button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,107 @@
+/* Container geral */
+#quiz-container {
+  max-width: 600px;
+  min-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #56189c;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-info h2 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 400px;
+}
+
+/* Opções da questão */
+#option-container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#option-container .options {
+  display: flex;
+  gap: 10px;
+  text-align: start;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  color: #8435de;
+}
+
+.options input {
+  display: none;
+}
+
+/* Container dos botões */
+.button-container,
+.button-help {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button-container button,
+.button-help button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+.options {
+  transition:
+    background-color 0.1s ease,
+    color 0.1s ease;
+}
+
+#option-container .options.correct {
+  background-color: #4caf50; /* cor de fundo verde */
+  color: white;
+}
+
+#option-container .options.wrong {
+  background-color: #f44336; /* cor de fundo vermelho */
+  color: white;
+}
+
+.inative {
+  display: none;
+}
+
+/* Responsividade para dispositivos móveis */
+/* Ajuste nos tamanhos para dispositivos menores */
+@media (max-width: 600px) {
+  #quiz-container {
+    padding: 15px;
+    min-width: 90%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .question-info h2 {
+    font-size: 1rem;
+  }
+
+  #option-container .options {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}

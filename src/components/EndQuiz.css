@@ -1,0 +1,88 @@
+/* Container geral para o fim do quiz */
+.container-end {
+  max-width: 600px;
+  min-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #56189c;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-end img {
+  width: 50%;
+  height: auto; /* Mantém o aspecto da imagem */
+  max-height: 300px; /* Define um limite para a altura da imagem */
+  margin: 0 auto; /* Centraliza a imagem */
+  border-radius: 12px;
+}
+
+.container-end h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.container-end p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Botões para reiniciar ou continuar */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.button-container button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #56189c;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #8435de;
+  color: white;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 600px) {
+  .container-end {
+    padding: 15px;
+    min-width: 100%;
+  }
+
+  .container-end h2 {
+    font-size: 1.5rem;
+  }
+
+  .container-end p {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Ajuste da imagem em telas pequenas */
+  .container-end img {
+    max-height: 200px; /* Imagem menor no celular */
+  }
+}
