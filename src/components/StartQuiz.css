@@ -10,6 +10,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0; /* Previne encolhimento */
 }
 
 .question-info h2 {
@@ -83,12 +84,23 @@
   display: none;
 }
 
+button {
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
 /* Responsividade para dispositivos móveis */
 /* Ajuste nos tamanhos para dispositivos menores */
 @media (max-width: 600px) {
   #quiz-container {
     padding: 15px;
     min-width: 90%;
+    min-width: 100%;
   }
 
   .button-container {

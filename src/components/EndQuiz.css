@@ -10,6 +10,7 @@
   background-color: #56189c;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .container-end img {
@@ -54,6 +55,16 @@
 .button-container button:hover {
   background-color: #8435de;
   color: white;
+}
+
+button {
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
 }
 
 /* Ajuste para dispositivos móveis */

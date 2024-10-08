@@ -1,8 +1,10 @@
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-width: 450px; /* Força uma largura mínima para a aplicação */
+  flex-shrink: 0; /* Impede que a aplicação encolha */
 }
 
 .App h1 {
@@ -12,4 +14,18 @@
 
 .active {
   display: none;
+}
+
+img {
+  max-width: 100%; /* Impede que as imagens ultrapassem os limites da tela */
+  height: auto;
+  display: block; /* Garante que as imagens sejam tratadas como blocos, evitando espaços indesejados abaixo da imagem */
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 600px) {
+  .App {
+    min-width: 100%; /* Força a largura da aplicação a se ajustar a 100% da tela */
+    padding: 10px;
+  }
 }
