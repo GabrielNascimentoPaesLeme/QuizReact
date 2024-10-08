@@ -1,4 +1,4 @@
-/* Container para as categorias */
+/* Container das categorias */
 #category-container {
   max-width: 600px;
   margin: 0 auto;
@@ -7,26 +7,35 @@
   border-radius: 12px;
   text-align: center;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap; /* Permite que os botões se ajustem em várias linhas */
+  justify-content: center; /* Centraliza os botões */
+  gap: 20px; /* Espaço entre os botões */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Título do container, caso queira */
 #category-container h2 {
   font-size: 1.5rem;
   color: #fff;
+  margin-bottom: 20px; /* Espaçamento entre o título e os botões */
 }
 
+/* Estilo dos botões */
 #category-container button {
   background-color: #fff;
   color: #56189c;
   border: none;
   padding: 10px 20px;
-  margin: 10px 0;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem; /* Definição do tamanho da fonte */
+  min-width: 120px; /* Tamanho mínimo dos botões para garantir que fiquem consistentes */
+  text-align: center; /* Garante que o texto dentro do botão fique centralizado */
+  flex-shrink: 0; /* Evita que o botão encolha em telas menores */
 }
 
+/* Efeito hover dos botões */
 #category-container button:hover {
   background-color: #8435de;
   color: #fff;
@@ -40,6 +49,7 @@
 
   #category-container button {
     padding: 8px 15px;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Reduz o tamanho da fonte em dispositivos menores */
+    min-width: 100px; /* Ajusta o tamanho mínimo dos botões para telas menores */
   }
 }

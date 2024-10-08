@@ -16,7 +16,6 @@ const initialState = {
   score: 0,
   qtdDica: 0,
   dica: false,
-  elimina: 0,
 };
 
 const quizReducer = (state, action) => {
@@ -92,7 +91,7 @@ const quizReducer = (state, action) => {
     case "CHECK_TIP":
       return {
         ...state,
-        qtdDica: 1,
+        qtdDica: state.qtdDica + 1,
         dica: true,
       };
 
@@ -127,7 +126,7 @@ const quizReducer = (state, action) => {
       return {
         ...state,
         data: newData,
-        elimina: 1,
+        qtdDica: state.qtdDica + 1,
       };
 
     default:

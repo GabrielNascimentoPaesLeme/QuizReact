@@ -86,17 +86,14 @@ const StartQuiz = () => {
         ))}
       </div>
 
-      <div className={`button-help ${quizState.dica ? "inative" : ""}`}>
+      <div className={`button-help ${quizState.qtdDica >= 3 ? "inative" : ""}`}>
         {!quizState.answerSelected &&
-        questaoAtual.tip &&
-        quizState.qtdDica === 0 ? (
-          <button onClick={() => handleDica()}>Dica</button>
-        ) : (
-          !quizState.answerSelected &&
-          options.length > 3 &&
-          quizState.elimina === 0 && (
+        (
+          <div>
+            <button onClick={() => handleDica()}>Dica</button>
             <button onClick={() => eliminaQuestion()}>Eliminar uma</button>
-          )
+          </div>
+          
         )}
       </div>
 
